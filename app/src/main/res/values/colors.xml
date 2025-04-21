@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="primary_400">#cd00ea</color>
+    <color name="primary_900">#5c00d2</color>
+
+    <color name="cor_magreza">#2196F3</color>          <!-- Azul -->
+    <color name="cor_normal">#4CAF50</color>           <!-- Verde -->
+    <color name="cor_sobrepeso">#FF9800</color>        <!-- Laranja -->
+    <color name="cor_obesidade">#F44336</color>        <!-- Vermelho -->
+    <color name="cor_obesidade_grave">#B71C1C</color>  <!-- Vermelho escuro -->
+
 </resources>

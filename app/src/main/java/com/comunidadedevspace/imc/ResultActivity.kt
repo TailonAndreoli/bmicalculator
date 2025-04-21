@@ -26,19 +26,28 @@ class ResultActivity : AppCompatActivity() {
         val tvClassificacao = findViewById<TextView>(R.id.tv_classificacao)
 
         tvResult.text = result.toString()
+        val classificacao: String
+        val corClassificacao: Int
 
-        val classificacao: String = if (result <= 18.5f) {
-            "MAGREZA" }
-        else if  (result > 18.5f && result <= 25f){
-            "NORMAL"
-        } else if (result > 25f && result <= 30f){
-            "SOBREPESO"
-        } else if (result > 30f && result <= 40f){
-            "OBESIDADE"
+        if (result <= 18.5f) {
+            classificacao = "MAGREZA"
+            corClassificacao = getColor(R.color.cor_magreza)
+        } else if (result > 18.5f && result <= 25f) {
+            classificacao = "NORMAL"
+            corClassificacao = getColor(R.color.cor_normal)
+        } else if (result > 25f && result <= 30f) {
+            classificacao = "SOBREPESO"
+            corClassificacao = getColor(R.color.cor_sobrepeso)
+        } else if (result > 30f && result <= 40f) {
+            classificacao = "OBESIDADE"
+            corClassificacao = getColor(R.color.cor_obesidade)
         } else {
-            "OBESIDADE GRAVE"
+            classificacao = "OBESIDADE GRAVE"
+            corClassificacao = getColor(R.color.cor_obesidade_grave)
         }
 
+
         tvClassificacao.text = classificacao
+        tvClassificacao.setTextColor(corClassificacao)
     }
 }
